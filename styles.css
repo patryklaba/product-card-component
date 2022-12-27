@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+:root {
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+  --fontPrimary: "Montserrat", sans-serif;
+  --fontAccent: "Fraunces", serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--cream);
+  font-family: var(--fontPrimary);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: var(--white);
+  overflow: hidden;
+  margin: 1.125rem;
+}
+
+.product-card > * {
+  flex: 1 1 300px;
+}
+
+.product-photo img {
+  max-width: 100%;
+  display: block;
+}
