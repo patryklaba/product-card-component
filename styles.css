@@ -1,11 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
 :root {
-  --cream: hsl(30, 38%, 92%);
-  --white: hsl(0, 0%, 100%);
-  --fontPrimary: "Montserrat", sans-serif;
-  --fontAccent: "Fraunces", serif;
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-dark-cyan-active: hsl(158, 36%, 22%);
+  --clr-dark-blue-900: hsl(212, 21%, 14%);
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-accent: "Fraunces", serif;
+  --ff-sans-serif: sans-serif;
 }
 
 *,
@@ -18,12 +22,23 @@
 
 body {
   min-height: 100vh;
-  background-color: var(--cream);
-  font-family: var(--fontPrimary);
+  background-color: var(--clr-cream);
+  font-family: var(--ff-primary);
   font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 34px;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .product-card {
@@ -31,7 +46,7 @@ body {
   flex-wrap: wrap;
   max-width: 600px;
   border-radius: 10px;
-  background-color: var(--white);
+  background-color: var(--clr-white);
   overflow: hidden;
   margin: 1.125rem;
 }
@@ -43,4 +58,78 @@ body {
 .product-photo img {
   max-width: 100%;
   display: block;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+
+.product-category {
+  color: var(--clr-dark-grayish-blue);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 6px;
+  font-weight: 100;
+}
+
+.product-name {
+  font-family: var(--ff-accent);
+  color: var(--clr-dark-blue-900);
+}
+
+.product-desc {
+  color: var(--clr-dark-grayish-blue);
+  line-height: 1.7;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-price > .curr-price {
+  font-family: var(--ff-accent);
+  color: var(--clr-dark-cyan);
+  font-size: 32px;
+}
+
+.product-price > .prev-price {
+  color: var(--clr-dark-grayish-blue);
+  font-size: 13px;
+}
+
+.product-details > .btn-action {
+  margin-top: auto;
+}
+
+.btn-action {
+  color: var(--clr-white);
+  background-color: var(--clr-dark-cyan);
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-action > p {
+  font-weight: 700;
+}
+
+.btn-action:hover {
+  background-color: var(--clr-dark-cyan-active);
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
