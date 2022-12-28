@@ -117,6 +117,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  transition: all 0.3s ease;
 }
 
 .btn-action > p {
